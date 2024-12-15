@@ -14,22 +14,25 @@ class NavIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.fromLTRB(0, 50.0, 0, 0),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero, // Remove rounded corners
-          ),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero, // Remove rounded corners
         ),
-        onPressed: () => context.go(goRouterLink),
+      ),
+      onPressed: () => context.go(goRouterLink),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
         child: Row(
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 50.0, 0),
               child: Icon(icon, color: Colors.grey, size: 40),
             ),
-            Text(name),
+            Text(
+              name,
+              style: TextStyle(fontSize: 16.0, color: Colors.black54),
+            ),
           ],
         ),
       ),

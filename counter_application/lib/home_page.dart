@@ -23,15 +23,18 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Counter Value',
-            ),
+            const Text('Counter Value',
+                style: TextStyle(
+                  fontSize: 20,
+                )),
             BlocBuilder<CounterCubit, int>(
                 bloc: counterCubit,
                 builder: (context, count) {
                   return Text(
                     count.toString(),
-                    style: Theme.of(context).textTheme.headlineMedium,
+                    style: TextStyle(
+                      fontSize: 40.0,
+                    ),
                   );
                 }),
           ],
