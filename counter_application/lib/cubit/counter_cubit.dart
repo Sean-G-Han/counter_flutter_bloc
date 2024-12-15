@@ -7,4 +7,9 @@ class CounterCubit extends Cubit<int> {
     //state cannot be set using '='. Emit does this job
     emit(state + 1); // equilivant to state += 1
   }
+
+  void decrement() {
+    //state cannot be set using '='. Emit does this job
+    emit(state - 1); // equilivant to state += 1
+  }
 }
